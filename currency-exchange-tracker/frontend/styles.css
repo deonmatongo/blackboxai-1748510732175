@@ -1,0 +1,121 @@
+/* Custom styles beyond Tailwind */
+
+/* Smooth transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Form focus states */
+input:focus, select:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Loading spinner */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast notifications */
+.toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Currency card hover effects */
+.currency-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.currency-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom table styles */
+.table-hover tr:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Button hover effects */
+.btn-hover-effect:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc2626;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+}
+
+/* Success message styling */
+.success-message {
+    color: #059669;
+    background-color: #d1fae5;
+    border: 1px solid #a7f3d0;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+}
